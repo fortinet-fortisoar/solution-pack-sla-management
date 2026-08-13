@@ -14,7 +14,7 @@ The **SLA Management** solution pack depends on the following solution packs tha
 
 | Solution Pack Name | Version         | Purpose                                |
 |:-------------------|:----------------|:---------------------------------------|
-| SOAR Framework     | v3.0.0 or later | Required for Incident Response modules |
+| SOAR Framework     | v4.0.0 or later | Required for Incident Response modules |
 
 To create and manage SLAs, you must be assigned a role with the following minimum permissions:
 
@@ -27,7 +27,7 @@ To create and manage SLAs, you must be assigned a role with the following minimu
 # Configuration
 For optimal performance of **SLA Management** solution pack, you can install and configure the following connector that help with the following:
 
->* **SLA Calculator** - Calculates SLA due date based on locale and work hours. This connector needs SOAR framework solution pack for supporting playbooks and module changes. To configure and use the SLA Calculator connector, refer to [Configuring SLA Calculator](https://docs.fortinet.com/fortisoar/connectors/slacalc)
+* **SLA Calculator** - Calculates SLA due date based on locale and work hours. This connector needs SOAR framework solution pack for supporting playbooks and module changes. To configure and use the SLA Calculator connector, refer to [Configuring SLA Calculator](https://docs.fortinet.com/fortisoar/connectors/slacalc)
 
 
 # Next Steps
