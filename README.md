@@ -1,6 +1,6 @@
 # Release Information 
 
-- **Version**: 2.2.0 
+- **Version**: 2.0.0 
 - **Certified**: Yes 
 - **Publisher**: Fortinet 
 - **Compatible Version**: FortiSOAR 8.0.0 and later 
