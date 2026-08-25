@@ -1,13 +1,13 @@
-[Home](../README.md) |
- | -------------------------------------------- |
+| [Home](../README.md) |
+| -------------------- |
 
 # Usage
 
-FortiSOAR&trade;'s **SLA Management** solution pack contains playbooks that automatically track the SLAs of alerts, cases, and other out-of-the-box playbooks for various use cases. The **SLA Calculator** connector calculates the SLA due dates based on the locale and work hours that you have specified.
+The **SLA Management** solution pack contains playbooks that track the SLAs of alerts and cases automatically. The **SLA Calculator** connector calculates the SLA due dates based on the locale and work hours that you specify.
 
-## Working with SLA Templates
+## Working with SLA templates
 
-The **SLA Management** solution pack contains SLA templates for each severity level defined for cases and alerts. There are templates for the following severity levels:
+The solution pack contains one SLA template for each severity level defined for alerts and cases:
 
 - Critical
 - High
@@ -15,57 +15,47 @@ The **SLA Management** solution pack contains SLA templates for each severity le
 - Low
 - Minimal
 
-![SLA templates list](./res/sla-templates.png)
+![List of SLA templates in the SLA Templates module](./res/sla-templates.png)
 
-You can set SLAs for both alerts and cases using the same **_SLA Template_**.
+The same SLA template applies to both alerts and cases.
 
-To view or edit existing SLA templates:
+To view or edit an existing SLA template:
 
-1. Click **Automation** ![chevron right icon](./res/icon-chevron-right.svg) **SLA Templates** from the left navigation bar.
+1. Click **Automation** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><img alt="then" src="./res/icon-chevron-dark.svg"></picture> **SLA Templates** in the left navigation bar.
 
-2. Click an SLA template to view or edit. For example, click **High** to edit SLA parameters for alerts and cases whose severity is set to **_High_**.
+2. Click the template that you want to view or edit. For example, click **High** to edit the SLA parameters for alerts and cases whose severity is set to **High**.
 
-    ![Editing SLA template](./res/editing-sla-template.png)
+    ![SLA template detail view showing acknowledge and response times for alerts and cases](./res/editing-sla-template.png)
 
-    Once opened, notice the following:
+    The template contains the following fields:
 
-    - **Pause Case SLA On**/**Pause Alert SLA On**: This field displays the alert and case status that triggers the playbooks to pause the SLA timer.
+    - **Pause Case SLA On** and **Pause Alert SLA On**: The case status and alert status that trigger the playbooks to pause the SLA timer. By default, the case SLA pauses when the case status changes to `Awaiting`, and the alert SLA pauses when the alert status changes to `Pending`.
 
-        Pause SLAs are tracked on change of case status to _`Awaiting`_ and alert status to _`Pending`_.
+    - **Case Acknowledge Time** and **Alert Acknowledge Time**: The time within which a case or alert must be acknowledged, set to **20** minutes by default. The acknowledgement SLA is tracked when the case status changes to `In Progress` and the alert status changes to `Investigating`.
 
-    - **Case Acknowledge Time**/**Alert Acknowledge Time**: This field displays the time to acknowledge a case or alert and is set to **20** minutes.
+    - **Case Response Time** and **Alert Response Time**: The time within which a case or alert must be resolved, set to **30** minutes by default. The response SLA is tracked when the case status changes to `Resolved` and the alert status changes to `Closed`.
 
-        Acknowledgment SLAs are tracked on change of case status to _`In Progress`_ and alert status to _`Investigating`_.
-    
-    - **Case Response Time**/**Alert Response Time**: This field displays the time to respond to a case or alert and is set to **30** minutes.
-
-        Response SLAs are tracked on change of case status to _`Resolved`_ and alert status to _`Closed`_.
-
-        <table>
-            <tr>
-                <th>NOTE</th>
-                <td>Changes in SLA values are implemented in real time.</td>
-            </tr>
-        </table>
+>[!Note]
+>Changes to SLA values take effect in real time.
 
 ## Viewing SLAs on a record
 
-You can view the SLA values in the detail-view of an alert or case record. The detail-view displays information such as *Acknowledge Due Date*, *Acknowledge Date*, *Acknowledge SLA*, and *Response Due Date* to track if the SLAs have been met.
+The detail view of an alert or case record displays fields such as *Acknowledge Due Date*, *Acknowledge Date*, *Acknowledge SLA*, and *Response Due Date*, which show whether the SLAs are met, missed, or awaiting action.
 
-1. Click **Automation** ![chevron right icon](./res/icon-chevron-right.svg) **SLA Templates** from the left navigation bar.
+1. Click **Alerts** in the left navigation bar to view alert records, or **Incident Response** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><img alt="then" src="./res/icon-chevron-dark.svg"></picture> **Cases** to view case records.
 
-2. Select to open an alert record to view the SLA status, i.e., whether they have been met, missed, or awaiting some action.
+2. Click a record to open its detail view.
 
-    The following example image displays an alert with SLA timers. Notice the following:
+![Alert detail view showing a met acknowledge SLA and a running response SLA timer](./res/viewing-sla-record.png)
 
-    - The **Acknowledge SLA** for an alert with **High** severity has been **Met**
-    - The response SLA timer is running at 23 minutes 18 seconds
-    - The **Response SLA** it is set to **Awaiting Action**
-    - The status of this alert is set to **Investigating** which is why the acknowledgment SLA is met
-    - Response SLA will change to **Met** or **Missed** depending on when the alert status is set to **Closed** after investigation
+In the preceding example:
 
-![](./res/viewing-sla-record.png)
+- The alert severity is **High**, and its **Acknowledge SLA** is **Met**, because the alert status was set to **Investigating** within the acknowledgement time.
+- The response SLA timer is running, with 23 minutes and 18 seconds elapsed.
+- The **Response SLA** is set to **Awaiting Action**.
+- The **Response SLA** changes to **Met** or **Missed** depending on when the alert status is set to **Closed**.
 
-# Next Steps
+# Next steps
+
 | [Installation](./setup.md#installation) | [Configuration](./setup.md#configuration) | [Contents](./contents.md) |
-| ----------------------------------------- | ------------------------------------------- | --------------------------- |
+|:----------------------------------------|:------------------------------------------|:--------------------------|

@@ -1,28 +1,26 @@
-# Release Information 
+# Release information
 
-- **Version**: 1.1.2 
-- **Certified**: Yes 
-- **Publisher**: Fortinet 
-- **Compatible Version**: FortiSOAR 7.6.5 and later 
-- [Release Notes](./release_notes.md)
- 
+- **Version**: 1.1.2
+- **Certified**: Yes
+- **Publisher**: Fortinet
+- **Compatible version**: FortiSOAR v7.6.5 and later
+- [Release notes](./release_notes.md)
 
-# Overview 
+# Overview
 
-The SLA Management solution pack, previously a part of the SOAR Framework Solution Pack (SFSP), has now emerged as a standalone Solution Pack (SP). Distinct user needs where ensuring SLA adherence was crucial, necessitating a dedicated focus and this transition.
+The SLA Management solution pack tracks and manages service level agreements (SLAs) for alerts and cases in FortiSOAR. It was previously part of the SOAR Framework solution pack and is now distributed as a standalone solution pack.
 
-## Key Features:
+The solution pack provides the following:
 
-- **SLA Calculation:** Enables precise calculation of SLA due dates considering locale-specific holidays and work hours.
-  
-- **Playbook Collection:** Offers a comprehensive collection of playbooks designed to automate SLA tracking and management for alerts and incidents.
+- **SLA calculation**: The SLA Calculator connector calculates acknowledgement and response due dates using the locale-specific holidays and work hours that you configure.
 
-- **Flexibility:** Provides flexibility to integrate seamlessly with existing workflows, ensuring efficient management of service level agreements without additional overhead.
+- **SLA templates**: Five templates, one for each severity level, define the acknowledgement time, the response time, and the record statuses that pause the SLA timer.
 
-It empowers users to maintain control over SLA compliance through automated processes and real-time monitoring capabilities and, hence, is ideal for organizations across various industries where meeting SLAs is critical to operational success and client satisfaction.
+- **Playbook collection**: Playbooks capture, update, and pause SLAs for alerts and cases, check for violations at scheduled intervals, and notify users when an SLA is missed.
 
+SLA values are applied to alert and case records automatically, and the SLA status of a record is updated as its status changes.
 
-# Next Steps
+# Next steps
 
 | [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) | [Contents](./docs/contents.md) |
-|----------------------------------------------|------------------------------------------------|--------------------------|--------------------------------|
+|:---------------------------------------------|:-----------------------------------------------|:-------------------------|:-------------------------------|

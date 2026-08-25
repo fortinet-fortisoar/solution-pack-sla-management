@@ -1,19 +1,19 @@
-[Home](../README.md) |
-|--------------------------------------------|
+| [Home](../README.md) |
+| -------------------- |
 
 # Installation
 
-1. To install a solution pack, click **Content Hub** > **Discover**.
-2. From the list of solution pack that appears, search **SLA Management**.
+1. Click **Content Hub** <picture><source media="(prefers-color-scheme: dark)" srcset="./res/icon-chevron-light.svg"><img alt="then" src="./res/icon-chevron-dark.svg"></picture> **Discover**.
+2. Search for **SLA Management** in the list of solution packs.
 3. Click the **SLA Management** solution pack card.
-4. Click **Install** on the lower part of the screen to begin the installation.
+4. Click **Install**.
 
 ## Prerequisites
 
-The **SLA Management** solution pack depends on the following solution packs that are installed automatically &ndash; if not already installed.
+The **SLA Management** solution pack depends on the following solution pack, which is installed automatically if it is not already installed.
 
-| Solution Pack Name | Version         | Purpose                                |
-|:-------------------|:----------------|:---------------------------------------|
+| Solution pack name | Version         | Purpose                            |
+|:-------------------|:----------------|:-----------------------------------|
 | SOAR Framework     | v3.0.0 or later | Required for Case Response modules |
 
 To create and manage SLAs, you must be assigned a role with the following minimum permissions:
@@ -22,14 +22,18 @@ To create and manage SLAs, you must be assigned a role with the following minimu
 2. `Execute` permission on the **Playbooks** module
 3. `Usage` permission on the **Widgets** module
 4. Default `Read` permission on the **Application** module
-5. Appropriate permissions to access the **Alert** and **Case** modules, if displaying SLA within these module records
+5. Permissions on the **Alerts** and **Cases** modules, if you want to view SLA values within those records
 
 # Configuration
-For optimal performance of **SLA Management** solution pack, you can install and configure the following connector that help with the following:
 
->* **SLA Calculator** - Calculates SLA due date based on locale and work hours. This connector needs SOAR framework solution pack for supporting playbooks and module changes. To configure and use the SLA Calculator connector, refer to [Configuring SLA Calculator](https://docs.fortinet.com/fortisoar/connectors/slacalc)
+The solution pack includes the **SLA Calculator** connector, which calculates SLA due dates based on the locale and work hours that you specify. Configure the connector before you use the SLA playbooks.
 
+To configure the connector, see [Configuring SLA Calculator](https://docs.fortinet.com/fortisoar/connectors/slacalc).
 
-# Next Steps
+>[!Note]
+>The SLA Calculator connector requires the SOAR Framework solution pack for its supporting playbooks and module changes.
+
+# Next steps
+
 | [Usage](./usage.md) | [Contents](./contents.md) |
-|---------------------|---------------------------|
+|:--------------------|:--------------------------|
